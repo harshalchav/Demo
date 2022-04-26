@@ -1,0 +1,58 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Flight List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+
+            <th>Flight ID</th>
+            <th>FlightName</th>
+            <th>Source</th>
+            <th>Destination</th>
+            <th>Arrival Time</th>
+            <th>Departue Time</th>
+            <th>Arrival Date</th>
+            <th>Departure Date</th>
+            <th>Flight Status</th>
+            <th>Capacity</th>
+            <th>Refundable</th>
+            <th>Stops</th>
+            <th>Rating</th>
+            <th>Offer Id</th>
+            <th>Economy Seats</th>
+            <th>Bussness Seats</th>
+            <th>Premium Seats</th>
+    
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let flight of flights ">
+            
+              
+            <td>{{flight.flightId}}</td>
+            <td>{{flight.flightName}}</td>
+            <td>{{flight.source}}</td>
+            <td>{{flight.destination}}</td>
+            <td>{{flight.arrivalTime}}</td>
+            <td>{{flight.departueTime}}</td>
+            <td>{{flight.arrivalDate}}</td>
+            <td>{{flight.departureDate}}</td>
+            <td>{{flight.flightStatus}}</td>
+            <td>{{flight.capacity}}</td>
+            <td>{{flight.refundable}}</td>
+            <td>{{flight.stops}}</td>
+            <td>{{flight.rating}}</td>
+            <td>{{(flight.offerId !== null ? flight.offerId.offerId: "NA" )}}</td>
+            <td>{{flight.economySeats}}</td>
+            <td>{{flight.bussnessSeats}}</td>
+            <td>{{flight.premiumSeats}}</td>
+            <td><button (click)="deleteFlight(flight.flightId)" class="btn btn-danger">Delete</button>
+                <button (click)="FlightDetails(flight.flightId)" class="btn btn-info" style="margin-left: 10px">Details</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
