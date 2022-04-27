@@ -1,0 +1,55 @@
+<form #registerUserForm="ngForm" (ngSubmit)="onSubmit(registerUserForm)">
+
+
+ 
+    <div class="form-group">
+        <label for="exampleInputPassword1">Name</label>
+        <input type="text" class="form-control" id="userName" name="userName" placeholder="Enter Full Name"
+            [(ngModel)]="user.userName" #userName="ngModel" required>
+        <div [hidden]="userName.valid || userName.pristine">
+            User Name required
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleInputEmail1">Email Id </label>
+        <input type="email" class="form-control" id="userEmail" name="userEmail" placeholder="Enter Email ID" [(ngModel)]="user.userEmail"
+            #userEmail="ngModel" required>
+        <div [hidden]="userEmail.valid || userEmail.pristine">
+            Role ID required
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="password" name="password"  [(ngModel)]="user.password" #password="ngModel" required>
+        <div [hidden]="password.valid || password.pristine">
+             password required
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">DOB</label>
+        <input type="date" class="form-control" id="dob" name="dob"  [(ngModel)]="user.dob"
+            #dob="ngModel" required>
+        <div [hidden]="dob.valid || dob.pristine">
+            DOB required
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Contaact No</label>
+        <input type="text" class="form-control" id="contaactNo" name="contaactNo" placeholder="Enter Contact No"
+            [(ngModel)]="user.contaactNo" #contaactNo="ngModel" required>
+        <div [hidden]="contaactNo.valid || contaactNo.pristine">
+            Contact No required
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Gender </label>
+        <input type="text" class="form-control" id="gender" name="gender" placeholder="Enter Gender" [(ngModel)]="user.gender"
+            #gender="ngModel" required>
+        <div [hidden]="gender.valid || gender.pristine">
+            Gender required
+        </div>
+    </div>
+  
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
