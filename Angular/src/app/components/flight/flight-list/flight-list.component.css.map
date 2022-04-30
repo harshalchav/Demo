@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "flight-list.component.scss"
-    ],
-    "names": [],
-    "file": "flight-list.component.css"
-}
